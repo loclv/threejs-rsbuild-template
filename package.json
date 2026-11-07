@@ -18,10 +18,14 @@
     "@rstest/core": "^0.12.6",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
-    "@types/node": "^26.6.6",
     "@types/bun": "^1.4.4",
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
     "happy-dom": "^21.0.4",
     "tailwindcss": "^4.3.4",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
   }
 }
