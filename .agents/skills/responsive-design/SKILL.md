@@ -14,6 +14,17 @@ Build accessible layouts that adapt continuously to their content and available 
 3. Prefer fluid sizing, Grid, and Flexbox over fixed dimensions and device-specific rules. Check long labels, translations, empty and loading states, and large data.
 4. Verify keyboard and touch interaction, zoom, reduced motion, clipping, and unintended page-level horizontal overflow. Report what was actually tested and any limitations.
 
+## Viewport ranges
+
+Use these ranges as representative coverage for design and testing, not mandatory CSS breakpoints or exclusive device categories:
+
+- Extra small / mobile: 320–480px (often portrait phones).
+- Small / tablet: 481–768px (often tablets and small or folded devices).
+- Medium / small desktop: 769–1024px (often landscape tablets and small laptops).
+- Large / desktop: 1025px and wider (often laptops and desktop monitors).
+
+Test representative widths within each supported range, as well as just below, at, and above actual layout transitions. Support widths outside these samples when the product requires them. Devices, zoom, and split-screen windows can fall into any range. Prefer mobile-first minimum-width variants; follow an existing desktop-down strategy when appropriate. Let content and configured Tailwind breakpoints determine actual transitions rather than forcing these boundaries.
+
 ## Tailwind conventions
 
 - Use unprefixed utilities for the base layout and `sm:`, `md:`, and other configured variants as minimum-width enhancements. These are breakpoint names, not device categories. Use the project's configured values rather than assuming defaults; add breakpoints only when content requires them.
