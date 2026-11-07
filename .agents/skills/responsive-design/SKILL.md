@@ -96,9 +96,6 @@ points, not device definitions:
 
 /* Wide desktop layouts */
 @media (min-width: 80rem) {}
-
-/* Very wide screens */
-@media (min-width: 96rem) {}
 ```
 
 Guidelines:
@@ -496,31 +493,31 @@ ordinary containers.
 
 Test representative widths, including intermediate values:
 
-- 320--360px: narrow phones
-- 375--430px: common phones
-- 600--800px: compact tablets and large phones in landscape
-- 768--1024px: tablets
-- 1280--above: laptops and desktops
+- 320-360px: narrow phones
+- 375-430px: common phones
+- 600-800px: compact tablets and large phones in landscape
+- 768-1024px: tablets
+- 1280-above: laptops and desktops
 
 These are test samples, not mandatory breakpoint values.
 
 For every page or component, verify:
 
-- [ ] No unintended horizontal page scrolling.
-- [ ] No clipped text, controls, menus, or dialogs.
-- [ ] Layout works just below and above each breakpoint.
-- [ ] Long labels, URLs, translations, and large numbers wrap safely.
-- [ ] Grid and Flex children can shrink (`min-width: 0` where needed).
-- [ ] Images preserve intended aspect ratio and do not overflow.
-- [ ] Navigation and all actions work with keyboard and touch.
-- [ ] Focus indicators are visible and focus is not obscured.
-- [ ] Forms remain usable with the mobile keyboard open.
-- [ ] Tables and code blocks have an intentional narrow-screen
+- No unintended horizontal page scrolling.
+- No clipped text, controls, menus, or dialogs.
+- Layout works just below and above each breakpoint.
+- Long labels, URLs, translations, and large numbers wrap safely.
+- Grid and Flex children can shrink (`min-width: 0` where needed).
+- Images preserve intended aspect ratio and do not overflow.
+- Navigation and all actions work with keyboard and touch.
+- Focus indicators are visible and focus is not obscured.
+- Forms remain usable with the mobile keyboard open.
+- Tables and code blocks have an intentional narrow-screen
   strategy.
-- [ ] Zoom and larger text do not break the layout.
-- [ ] Reduced-motion preference is respected.
-- [ ] Fixed and sticky elements do not cover content.
-- [ ] No unnecessary breakpoint-specific duplication remains.
+- Zoom and larger text do not break the layout.
+- Reduced-motion preference is respected.
+- Fixed and sticky elements do not cover content.
+- No unnecessary breakpoint-specific duplication remains.
 
 Recommended tools: - Browser DevTools responsive mode for viewport and
 device emulation. - Playwright or Cypress for viewport-based regression
