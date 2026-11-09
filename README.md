@@ -10,6 +10,16 @@ The compiled `public/terrain.wasm` is included. To rebuild it, install Clang and
 clang --target=wasm32 -O3 -nostdlib -Wl,--no-entry -Wl,--export-memory -o public/terrain.wasm wasm/terrain.c
 ```
 
+## Progressive Web App (PWA) Support
+
+This application is configured as a fully installable Progressive Web App with offline caching:
+
+- Web App Manifest: Configured in `rsbuild.config.ts` (`manifest.webmanifest`) with standalone display mode, orientation, theme colors, and icons.
+- Offline & Service Worker: Automated via `rsbuild-plugin-pwa` and Workbox. Pre-caches application assets and crucially `terrain.wasm`, allowing the 3D terrain simulation to run without an active internet connection.
+- Install Experience: Native `beforeinstallprompt` handling with a non-intrusive "Install App" button and standalone detection.
+- Adaptive Icons: Includes 192×192 and 512×512 standard icons, 512×512 maskable icon for Android adaptive launchers, SVG vector icon, and 180×180 Apple touch icon.
+- Mobile Polish: Safe area insets (`env(safe-area-inset-*)`) and viewport fit configuration for notch displays and standalone window frames.
+
 ## Setup
 
 Install the dependencies:

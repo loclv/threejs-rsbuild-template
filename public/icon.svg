@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2c20" />
+      <stop offset="100%" stop-color="#121a13" />
+    </linearGradient>
+    <linearGradient id="peakGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8dfd4" />
+      <stop offset="50%" stop-color="#8ba18b" />
+      <stop offset="100%" stop-color="#4d624e" />
+    </linearGradient>
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a735a" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#a8bda8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#5a735a" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="104" fill="url(#bgGrad)" />
+
+  <!-- Subtle terrain contour grid rings -->
+  <g fill="none" stroke="url(#gridGrad)" stroke-width="2.5" opacity="0.6">
+    <ellipse cx="256" cy="380" rx="190" ry="70" />
+    <ellipse cx="256" cy="360" rx="160" ry="60" />
+    <ellipse cx="256" cy="340" rx="130" ry="50" />
+    <ellipse cx="256" cy="315" rx="100" ry="40" />
+    <ellipse cx="256" cy="285" rx="70" ry="28" />
+  </g>
+
+  <!-- Isometric Mountain Ridges (3D Terrain Mesh Lines) -->
+  <g fill="none" stroke="#d8dfd4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center Peak -->
+    <path d="M 256 120 L 160 300 L 256 360 L 352 300 Z" fill="url(#peakGrad)" fill-opacity="0.25" />
+    <path d="M 256 120 L 256 360" stroke="#f6f8e9" stroke-width="3" />
+    <path d="M 256 120 L 160 300" stroke="#d8dfd4" stroke-width="4" />
+    <path d="M 256 120 L 352 300" stroke="#a4baa4" stroke-width="4" />
+
+    <!-- Left Sub-ridge -->
+    <path d="M 160 300 L 100 370 L 180 400 L 256 360" stroke="#708b70" stroke-width="3" />
+    <!-- Right Sub-ridge -->
+    <path d="M 352 300 L 412 370 L 332 400 L 256 360" stroke="#556b55" stroke-width="3" />
+
+    <!-- Isometric contour horizontal sweeps -->
+    <path d="M 208 210 L 256 240 L 304 210" stroke="#d8dfd4" stroke-width="3" opacity="0.8" />
+    <path d="M 184 255 L 256 300 L 328 255" stroke="#d8dfd4" stroke-width="3" opacity="0.8" />
+  </g>
+
+  <!-- Glowing apex point -->
+  <circle cx="256" cy="120" r="7" fill="#f6f8e9" />
+  <circle cx="256" cy="120" r="14" fill="#f6f8e9" opacity="0.3" />
+</svg>
